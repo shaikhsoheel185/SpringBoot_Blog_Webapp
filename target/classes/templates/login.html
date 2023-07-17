@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+
+<!--header -->
+<div th:replace="~{blog/header :: header}"></div>
+
+<body>
+
+<!--navabr-->
+<div th:replace="~{blog/header :: navbar}"></div>
+
+
+
+
+
+
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start section-p1">
+    <style>
+    .cascading-right {
+      margin-right: -50px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+    <!-- Jumbotron -->
+    <div class="container py-4">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+                    <div class="card-body p-5 shadow-5 text-center">
+                        <div th:if="${param.error}">
+                            <div class="alert alert-danger" role="alert">
+                                Invalid email or password
+                            </div>
+                        </div>
+                        <div th:if="${param.logout}">
+                            <div class="alert alert-success" role="alert">
+                                You have been logged out
+                            </div>
+                        </div>
+                        <h2 class="fw-bold mb-5" style="font-size: 50px;"><strong>Log in</strong></h2>
+
+                        <form
+                                method="post"
+                                th:action="@{/login}"
+                                role="form"
+                        >
+
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="text"
+                                       id="username"
+                                       name="username"
+                                       class="form-control"
+                                       placeholder="username"/>
+                                <label class="form-label"
+                                       for="username"></label>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password"
+                                       id="password"
+                                       name="password"
+                                       class="form-control"
+                                       placeholder="password" />
+                                <label class="form-label"
+                                       for="password"></label>
+                            </div>
+
+
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4">
+                                Log in
+                            </button>
+
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                                <p>or sign up with:</p>
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-google"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Jumbotron -->
+</section>
+
+
+
+
+
+
+<!--footer section-->
+<div th:replace="~{blog/footer :: footer}"></div>
+</body>
+</html>

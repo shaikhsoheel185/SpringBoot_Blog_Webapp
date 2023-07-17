@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head th:fragment="header">
+  <meta charset="UTF-8">
+  <title> Spring Boot Thymeleaf Blog App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
+  <link rel="stylesheet" th:href="@{/css/fontawesome.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css}" />
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.min.css}" crossorigin="anonymous">
+  <style>
+        .section-p1 {
+            padding: 40px 80px;
+            margin: 40px 0;
+        }
+    </style>
+
+</head>
+<body>
+
+<section id="header" class="d-flex" th:fragment="navbar">
+  <div>
+    <ul id="navbar" class="d-flex">
+      <!-- Logo -->
+      <div class="d-flex align-items-start justify-content-start" style="margin-right: 400px; margin-left: 50px;">
+        <span style="font-weight: bold; font-size: 20px;">blogs</span>
+      </div>
+
+      <!-- Navigation links -->
+      <div class="d-flex align-items-center justify-content-center ml-auto p-2">
+        <li><a href="">Home</a></li>
+        <!-- Dropdown menu for categories -->
+
+        <li><a th:href="@{/admin/posts}">Posts</a></li>
+
+        <li><a th:href="@{/admin/posts/new-post}">New Post</a></li>
+        <li><a th:href="@{/admin/posts/comments}">Comments</a></li>
+        <li><a th:href="@{/logout}">Logout</a></li>
+
+
+      </div>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>

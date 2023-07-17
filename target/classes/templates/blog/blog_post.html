@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<div th:replace="~{blog/header :: header}"></div>
+<body>
+
+<!--navbar-->
+<div th:replace="~{blog/header :: navbar}"></div>
+
+<section class="section-p1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+
+                <h2 th:text="${post.title}"></h2>
+                <hr/>
+                <h4 th:text="${post.shortDescription}"></h4>
+                <hr />
+                <div th:utext="${post.content}"></div>
+
+
+
+                <!--<div class="section-p1">
+                    <h3>Comments</h3>
+                    <div th:each="comment : ${post.comments}">
+                        <div>
+                            <p><b>Name:</b> <strong th:text="${comment.name}"></strong></p>
+                            <p><b>Date:</b> <strong th:text="${#temporals.format(comment.createdOn, 'dd MMMM yyyy')}"></strong></p>
+                            <p th:text="${comment.content}"></p>
+                        </div>
+                    </div>
+                </div>-->
+
+                <section class="section-p1" >
+                    <div class="container bootstrap snippets bootdey">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="blog-comment">
+                                    <h2 class="text-success">Comments</h2>
+                                    <br/>
+                                    <br/>
+
+                                    <ul class="comments" th:each="comment : ${post.comments}">
+                                        <li class="clearfix">
+                                            <h3><a  th:text="${comment.name}"><!--JohnDoe--></a></h3>
+                                            <div class="post-comments">
+                                                <p class="meta"  th:text="${#temporals.format(comment.createdOn, 'dd MMMM yyyy')}"><!--Dec 19, 2014--> </p>
+
+                                                <p th:text="${comment.content}">
+                                                    <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    Etiam a sapien odio, sit amet-->
+                                                </p>
+                                                <hr/>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
+                <section class="section-p1">
+                    <div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h2> Leave a comment</h2>
+                            </div>
+                            <div class="card-body">
+                                <form
+                                        role="form"
+                                        method="post"
+                                        th:action="@{/{postUrl}/comments(postUrl=${post.url})}"
+                                        th:object="${comment}"
+                                >
+                                    <div class="row">
+                                        <div class="col-md-5 mb-3">
+                                            <input
+                                                    class="form-control"
+                                                    id="name"
+                                                    name="name"
+                                                    placeholder="Enter name"
+                                                    th:field="*{name}"
+                                                    type="text"
+                                            />
+                                            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></p>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="col-md-5 mb-3">
+                                            <input
+                                                    class="form-control"
+                                                    id="email"
+                                                    name="email"
+                                                    placeholder="Enter email"
+                                                    th:field="*{email}"
+                                                    type="text"
+                                            />
+                                            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-5 mb-3">
+                                    <textarea
+                                            class="form-control"
+                                            id="content"
+                                            name="content"
+                                            placeholder="Enter comment"
+                                            rows="8"
+                                            th:field="*{content}">
+                                    </textarea>
+                                            <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-5">
+                                            <button
+                                                    class="btn btn-primary"
+                                                    type="submit"
+                                            >
+                                                Submit
+
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+
+
+            <div class="col-md-2">
+                <!-- search bar           -->
+                <div th:replace="blog/search :: search"></div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!--footer-->
+<div th:replace="~{blog/footer :: footer}"></div>
+
+
+
+</body>
+</html>
