@@ -13,7 +13,7 @@
 ####  🔗  https://springbootblogwebapp-production.up.railway.app/
 
 
-Insert gif or link to demo
+
 
  **Technology at Its Finest:**
 
