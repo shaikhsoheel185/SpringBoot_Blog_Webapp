@@ -2,11 +2,36 @@
 
  ##  🛠 Skills And Tech Stack
 
-**Client:** HTML, CSS, Bootstrap,Thymeleaf
+**Client:** HTML, CSS, Bootstrap, Thymeleaf
 
 **Server:** Apache Tomcat
 
 **Backend:** The application harnesses the power of Spring MVC, Spring Boot, Spring Data JPA, and MySQL database, providing a robust and scalable foundation.
+
+
+ ## 🛠 Technologies and Tools Used:
+
+- Java 17
+
+- Spring Boot 3
+
+- Spring Framework 6
+
+- Spring MVC 6
+
+- Thymeleaf
+
+- Bootstrap CSS 5 Framework
+
+- Spring Security 6
+
+- Spring Data JPA
+
+- Hibernate Framework 6
+
+- MySQL Database
+
+- Maven
 
 
 ###  Live Website At 
