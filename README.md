@@ -9,6 +9,30 @@
 **Backend:** The application harnesses the power of Spring MVC, Spring Boot, Spring Data JPA, and MySQL database, providing a robust and scalable foundation.
 
 
+
+
+
+###  Live Website At 
+####  🔗  https://springbootblogwebapp-production.up.railway.app/
+
+
+
+
+ **Technology at Its Finest:**
+
+Powering the heart of BlogWebApp is an arsenal of cutting-edge technologies. Spring MVC, Spring Boot, Spring Data JPA, and MySQL collaborate harmoniously to create a robust and scalable backend, ensuring a seamless user experience even under heavy traffic
+
+
+---
+
+ # BlogWebApp - A Captivating Blogging Experience
+
+
+
+
+
+Welcome to BlogWebApp, an immersive and feature-rich blogging platform that allows users to share their thoughts, stories, and ideas with the world. Seamlessly blending cutting-edge technologies, this web application brings together the power of Spring MVC, Spring Boot, Spring Data JPA, and MySQL in the backend, while the front end dazzles with Thymeleaf, Bootstrap, HTML, and CSS.
+
  ## 🛠 Technologies and Tools Used:
 
 - Java 17
@@ -32,29 +56,7 @@
 - MySQL Database
 
 - Maven
-
-
-###  Live Website At 
-####  🔗  https://springbootblogwebapp-production.up.railway.app/
-
-
-
-
- **Technology at Its Finest:**
-
-Powering the heart of BlogWebApp is an arsenal of cutting-edge technologies. Spring MVC, Spring Boot, Spring Data JPA, and MySQL collaborate harmoniously to create a robust and scalable backend, ensuring a seamless user experience even under heavy traffic
-
-
----
-
- # BlogWebApp - A Captivating Blogging Experience
-
-
-
-
-
-Welcome to BlogWebApp, an immersive and feature-rich blogging platform that allows users to share their thoughts, stories, and ideas with the world. Seamlessly blending cutting-edge technologies, this web application brings together the power of Spring MVC, Spring Boot, Spring Data JPA, and MySQL in the backend, while the frontend dazzles with Thymeleaf, Bootstrap, HTML, and CSS.
-
+ 
 ## Key Features
 
 ### User-friendly Interface:
